@@ -19,7 +19,8 @@ nixPkgs = [
 
 [phases.build]
 cmds = [
-  "export COMPOSER_ALLOW_SUPERUSER=1",
+  "curl -sS https://getcomposer.org/installer | php",
+  "mv composer.phar /usr/local/bin/composer",
   "composer install --no-dev --optimize-autoloader"
 ]
 
