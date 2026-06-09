@@ -5,7 +5,11 @@ NIXPACKS_PHP_VERSION = "8.3"
 nixPkgs = [
   "php83",
   "php83Packages.composer",
+
+  "nodejs",   # 👈 TAMBAH INI
+
   "php83Extensions.bcmath",
+  "php83Extensions.calendar",
   "php83Extensions.gd",
   "php83Extensions.intl",
   "php83Extensions.pdo",
