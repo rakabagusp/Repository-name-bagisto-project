@@ -1,6 +1,5 @@
 [phases.setup]
 nixPkgs = [
-  
   "php83",
   "php83Extensions.bcmath",
   "php83Extensions.intl",
@@ -11,7 +10,7 @@ nixPkgs = [
   "php83Extensions.xml",
   "php83Extensions.curl",
   "php83Extensions.zip",
-  "php83Extensions.openssl"
+  "php83Extensions.openssl",
   "composer"
 ]
 
