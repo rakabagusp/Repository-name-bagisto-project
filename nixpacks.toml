@@ -12,6 +12,7 @@ nixPkgs = [
   "php83Extensions.curl",
   "php83Extensions.zip",
   "php83Extensions.openssl"
+  "composer"
 ]
 
 [phases.build]
