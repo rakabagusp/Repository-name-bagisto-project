@@ -13,7 +13,7 @@ nixPkgs = [
 ]
 
 [phases.build]
-cmds = ["composer install --no-dev --optimize-autoloader"]
+cmds = ["COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader --ignore-platform-reqs"]
 
 [start]
 cmd = "php artisan serve --host=0.0.0.0 --port=$PORT"
