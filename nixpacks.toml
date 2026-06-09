@@ -10,12 +10,13 @@ nixPkgs = [
   "php83Extensions.xml",
   "php83Extensions.curl",
   "php83Extensions.zip",
-  "php83Extensions.openssl",
-  "composer"
+  "php83Extensions.openssl"
 ]
 
 [phases.build]
 cmds = [
+  "curl -sS https://getcomposer.org/installer | php",
+  "mv composer.phar /usr/local/bin/composer",
   "COMPOSER_ALLOW_SUPERUSER=1 composer install --no-dev --optimize-autoloader"
 ]
 
