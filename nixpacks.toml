@@ -1,6 +1,6 @@
 [phases.setup]
 nixPkgs = [
-  "php",
+  
   "php83",
   "php83Extensions.bcmath",
   "php83Extensions.intl",
