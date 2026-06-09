@@ -23,6 +23,7 @@ nixPkgs = [
 
 [phases.build]
 cmds = [
+  "php -v",
   "composer install --no-dev --optimize-autoloader --no-interaction"
 ]
 
