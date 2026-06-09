@@ -4,10 +4,8 @@ NIXPACKS_PHP_VERSION = "8.3"
 [phases.setup]
 nixPkgs = [
   "php83",
-  "phpPackages.composer",
-
+  "php83Packages.composer",
   "php83Extensions.bcmath",
-  "php83Extensions.calendar",
   "php83Extensions.gd",
   "php83Extensions.intl",
   "php83Extensions.pdo",
@@ -23,8 +21,7 @@ nixPkgs = [
 
 [phases.build]
 cmds = [
-  "php -v",
-  "composer install --no-dev --optimize-autoloader --no-interaction"
+  "composer install --ignore-platform-reqs"
 ]
 
 [start]
