@@ -13,4 +13,11 @@ COPY . .
 RUN composer install --no-dev --optimize-autoloader
 
 EXPOSE 8080
-CMD php -S 0.0.0.0:8080 -t public
+
+CMD php artisan config:clear && \
+    php artisan cache:clear && \
+    php artisan key:generate --force && \
+    php artisan migrate --force && \
+    php artisan db:seed --force && \
+    php artisan storage:link && \
+    php -S 0.0.0.0:$PORT -t public
